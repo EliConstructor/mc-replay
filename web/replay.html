@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>REPLAY 2022</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="titleframe">
+        <h1 class="maintitle" id="maintitle">REPLAY 2022</h1>
+        <p class="complaint">I spent way too long on this.</p>
+    </div>
+
+    <div class="section playtime">
+        <h1 class="cattitle">Playtime</h1>
+        <p class="maintext">Last year you spent a total of <em><a id="totalplaytime">0</a> hours </em>playing on the
+            server.</p>
+        <p class="maintext">Your top 3 servers ranked by playtime are:</p>
+        <ol class="ranking">
+            <li><a id="playtimeserver1name">N/A</a>: <em><a id="playtimeserver1">0</a> hours</em></li>
+            <li><a id="playtimeserver2name">N/A</a>: <em><a id="playtimeserver2">0</a> hours</em></li>
+            <li><a id="playtimeserver3name">N/A</a>: <em><a id="playtimeserver3">0</a> hours</em></li>
+        </ol>
+        <p class="maintext">You had <em><a id="sessions">0</a> </em> play sessions.</p>
+        <p class="maintext"><em><a id="sneaktime">0</a> </em> of those hours were spent holding the shift key. <a
+                id="sneaktimeouch"></a></p>
+    </div>
+
+    <div class="section distance">
+        <h1 class="cattitle">Distance</h1>
+        <p class="maintext">Last year you travelled <em><a id="totaldistance">0</a> km </em>on the server using all
+            forms of movement.</p>
+        <p class="maintext">Here are all your forms of transport broken down:</p>
+        <ul class="ranking">
+            <li>On foot (All): <em><a id="distanceonfoot">0</a> km</em></li>
+            <li>On foot (Walking): <em><a id="distancewalked">0</a> km</em></li>
+            <li>On foot (Sprinting): <em><a id="distancesprinted">0</a> km</em></li>
+            <li>On foot (Crouching): <em><a id="distancecrouched">0</a> km</em></li>
+            <li>On foot (Underwater): <em><a id="distanceunderwater">0</a> km</em></li>
+            <li>Swimming: <em><a id="distanceswam">0</a> km</em></li>
+            <li>Falling: <em><a id="distancefallen">0</a> km</em></li>
+            <li>By boat: <em><a id="distanceboat">0</a> km</em></li>
+            <li>On horseback: <em><a id="distancehorse">0</a> km</em></li>
+            <li>Elytra: <em><a id="distanceelytra">0</a> km</em></li>
+            <li>Other: <em><a id="distanceflown">0</a> km</em></li>
+        </ul>
+        <p class="maintext"><a id="distancecomments"></a></p>
+        <p class="maintext">You jumped <em><a id="jumps"></a> times!</em></p>
+    </div>
+
+    <div class="section combat">
+        <h1 class="cattitle">Combat</h1>
+        <p class="maintext">Last year you died <em><a id="deaths">0</a> times.</em></p>
+        <p class="maintext">You killed <em><a id="playerkills">0</a> players.</em></p>
+        <p class="maintext">You were killed by a player <em><a id="deathsbyplayer">0</a> times.</em></p>
+        <p class="maintext">You killed <em><a id="mobkills">0</a> mobs.</em></p>
+        <p class="maintext">Your top 10 most killed mobs were:</p>
+        <ol class="ranking">
+            <li><a id="topmobkillname1">N/A</a>: <em><a id="topmobkilled1">0</a> times</em></li>
+            <li><a id="topmobkillname2">N/A</a>: <em><a id="topmobkilled2">0</a> times</em></li>
+            <li><a id="topmobkillname3">N/A</a>: <em><a id="topmobkilled3">0</a> times</em></li>
+            <li><a id="topmobkillname4">N/A</a>: <em><a id="topmobkilled4">0</a> times</em></li>
+            <li><a id="topmobkillname5">N/A</a>: <em><a id="topmobkilled5">0</a> times</em></li>
+            <li><a id="topmobkillname6">N/A</a>: <em><a id="topmobkilled6">0</a> times</em></li>
+            <li><a id="topmobkillname7">N/A</a>: <em><a id="topmobkilled7">0</a> times</em></li>
+            <li><a id="topmobkillname8">N/A</a>: <em><a id="topmobkilled8">0</a> times</em></li>
+            <li><a id="topmobkillname9">N/A</a>: <em><a id="topmobkilled9">0</a> times</em></li>
+            <li><a id="topmobkillname10">N/A</a>: <em><a id="topmobkilled10">0</a> times</em></li>
+        </ol>
+        <p class="maintext">The top 10 mobs that you died to most were:</p>
+        <ol class="ranking">
+            <li><a id="topmobdeathname1">N/A</a>: <em><a id="topmobdeath1">0</a> times</em></li>
+            <li><a id="topmobdeathname2">N/A</a>: <em><a id="topmobdeath2">0</a> times</em></li>
+            <li><a id="topmobdeathname3">N/A</a>: <em><a id="topmobdeath3">0</a> times</em></li>
+            <li><a id="topmobdeathname4">N/A</a>: <em><a id="topmobdeath4">0</a> times</em></li>
+            <li><a id="topmobdeathname5">N/A</a>: <em><a id="topmobdeath5">0</a> times</em></li>
+            <li><a id="topmobdeathname6">N/A</a>: <em><a id="topmobdeath6">0</a> times</em></li>
+            <li><a id="topmobdeathname7">N/A</a>: <em><a id="topmobdeath7">0</a> times</em></li>
+            <li><a id="topmobdeathname8">N/A</a>: <em><a id="topmobdeath8">0</a> times</em></li>
+            <li><a id="topmobdeathname9">N/A</a>: <em><a id="topmobdeath9">0</a> times</em></li>
+            <li><a id="topmobdeathname10">N/A</a>: <em><a id="topmobdeath10">0</a> times</em></li>
+        </ol>
+    </div>
+
+    <div class="section construction">
+        <h1 class="cattitle">Construction</h1>
+        <p class="maintext">Last year you broke <em><a id="totalbroken">0</a> blocks </em> by hand.</p>
+        <p class="maintext">You crafted <em><a id="totalcrafted">0</a> items </em> by hand.</p>
+        <p class="maintext">You used (right clicked) <em><a id="totalused">0</a> items </em>(or held blocks).</p>
+        <p class="maintext">Your top 10 most broken blocks were:</p>
+        <ol class="ranking">
+            <li><a id="topblockbrokenname1">N/A</a>: <em><a id="topblockbroken1">0</a> times</em></li>
+            <li><a id="topblockbrokenname2">N/A</a>: <em><a id="topblockbroken2">0</a> times</em></li>
+            <li><a id="topblockbrokenname3">N/A</a>: <em><a id="topblockbroken3">0</a> times</em></li>
+            <li><a id="topblockbrokenname4">N/A</a>: <em><a id="topblockbroken4">0</a> times</em></li>
+            <li><a id="topblockbrokenname5">N/A</a>: <em><a id="topblockbroken5">0</a> times</em></li>
+            <li><a id="topblockbrokenname6">N/A</a>: <em><a id="topblockbroken6">0</a> times</em></li>
+            <li><a id="topblockbrokenname7">N/A</a>: <em><a id="topblockbroken7">0</a> times</em></li>
+            <li><a id="topblockbrokenname8">N/A</a>: <em><a id="topblockbroken8">0</a> times</em></li>
+            <li><a id="topblockbrokenname9">N/A</a>: <em><a id="topblockbroken9">0</a> times</em></li>
+            <li><a id="topblockbrokenname10">N/A</a>: <em><a id="topblockbroken10">0</a> times</em></li>
+        </ol>
+        <p class="maintext">Your top 10 most crafted items were:</p>
+        <ol class="ranking">
+            <li><a id="topitemcraftedname1">N/A</a>: <em><a id="topitemcrafted1">0</a> times</em></li>
+            <li><a id="topitemcraftedname2">N/A</a>: <em><a id="topitemcrafted2">0</a> times</em></li>
+            <li><a id="topitemcraftedname3">N/A</a>: <em><a id="topitemcrafted3">0</a> times</em></li>
+            <li><a id="topitemcraftedname4">N/A</a>: <em><a id="topitemcrafted4">0</a> times</em></li>
+            <li><a id="topitemcraftedname5">N/A</a>: <em><a id="topitemcrafted5">0</a> times</em></li>
+            <li><a id="topitemcraftedname6">N/A</a>: <em><a id="topitemcrafted6">0</a> times</em></li>
+            <li><a id="topitemcraftedname7">N/A</a>: <em><a id="topitemcrafted7">0</a> times</em></li>
+            <li><a id="topitemcraftedname8">N/A</a>: <em><a id="topitemcrafted8">0</a> times</em></li>
+            <li><a id="topitemcraftedname9">N/A</a>: <em><a id="topitemcrafted9">0</a> times</em></li>
+            <li><a id="topitemcraftedname10">N/A</a>: <em><a id="topitemcrafted10">0</a> times</em></li>
+        </ol>
+        <p class="maintext">Your top 10 most used items were:</p>
+        <ol class="ranking">
+            <li><a id="topitemusedname1">N/A</a>: <em><a id="topitemused1">0</a> times</em></li>
+            <li><a id="topitemusedname2">N/A</a>: <em><a id="topitemused2">0</a> times</em></li>
+            <li><a id="topitemusedname3">N/A</a>: <em><a id="topitemused3">0</a> times</em></li>
+            <li><a id="topitemusedname4">N/A</a>: <em><a id="topitemused4">0</a> times</em></li>
+            <li><a id="topitemusedname5">N/A</a>: <em><a id="topitemused5">0</a> times</em></li>
+            <li><a id="topitemusedname6">N/A</a>: <em><a id="topitemused6">0</a> times</em></li>
+            <li><a id="topitemusedname7">N/A</a>: <em><a id="topitemused7">0</a> times</em></li>
+            <li><a id="topitemusedname8">N/A</a>: <em><a id="topitemused8">0</a> times</em></li>
+            <li><a id="topitemusedname9">N/A</a>: <em><a id="topitemused9">0</a> times</em></li>
+            <li><a id="topitemusedname10">N/A</a>: <em><a id="topitemused10">0</a> times</em></li>
+        </ol>
+    </div>
+
+    <div class="section conclusion">
+        <h1 class="cattitle">Here's to 2023!</h1>
+        <p class="maintext">The person with the most play time this year will get precisely <em>2,38€ </em> to be used
+            at your closest K-Market or Tesco.</p>
+        <p class="disclaimer">(Terms and conditions apply)</p>
+        <p class="complaint" style="color: rgb(94, 0, 0);">Technically this also contains a bit of the end of 2021 but shhhh nobody cares.</p>
+    </div>
+
+    <script>
+        /*window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+            if (mobile) {
+                alert("I did warn you about the jank formatting on mobile, yet you continued anyway. How disobedient of you.");
+            } else {
+
+            }
+        }*/
+
+        window.onload = function () {
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+            if (mobile) {
+                document.getElementById("maintitle").style = "font-size: 80px;"
+            }
+        }
+
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+                get: (searchParams, prop) => searchParams.get(prop),
+        });
+
+        $.get("data/" + params.uuid + ".json", function (data) {
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+                get: (searchParams, prop) => searchParams.get(prop),
+            });
+        
+            function format(str) {
+                const newStr = str.replace(/_/g, ' ');
+                const words = newStr.split(" ");
+                for (let i = 0; i < words.length; i++) {
+                    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+                }
+                return words.join(" ");
+            }
+
+            try {document.getElementById("totalplaytime").innerHTML = Math.round(data["combined"].playtimeHours);}catch{}
+            try {document.getElementById("playtimeserver1name").innerHTML = data["playtimeHoursRanked"][0];}catch{}
+            try {document.getElementById("playtimeserver2name").innerHTML = data["playtimeHoursRanked"][1];}catch{}
+            try {document.getElementById("playtimeserver3name").innerHTML = data["playtimeHoursRanked"][2];}catch{}
+            try {document.getElementById("playtimeserver1").innerHTML = Math.round(data[data["playtimeHoursRanked"][0]].playtimeHours);}catch{}
+            try {document.getElementById("playtimeserver2").innerHTML = Math.round(data[data["playtimeHoursRanked"][1]].playtimeHours);}catch{}
+            try {document.getElementById("playtimeserver3").innerHTML = Math.round(data[data["playtimeHoursRanked"][2]].playtimeHours);}catch{}
+            try {document.getElementById("sessions").innerHTML = Math.round(data["combined"].gamesQuit);}catch{}
+            try {document.getElementById("sneaktime").innerHTML = Math.round(data["combined"].sneakTimeHours);}catch{}
+            try {if (Math.round(data["combined"].sneakTimeHours) > 5) {
+                document.getElementById("sneaktimeouch").innerHTML = "Ouch."
+            }}catch{}
+            try {let totaldistance = Math.round(
+                (parseInt(data["combined"].metresWalked) +
+                    parseInt(data["combined"].metresSprinted) +
+                    parseInt(data["combined"].metresCrouched) +
+                    parseInt(data["combined"].metresSwam) +
+                    parseInt(data["combined"].metresFallen) +
+                    parseInt(data["combined"].metresByBoat) +
+                    parseInt(data["combined"].metresByHorse) +
+                    parseInt(data["combined"].metresByElytra) +
+                    parseInt(data["combined"].metresWalkedUnderwater) +
+                    parseInt(data["combined"].metresFlown)) / 1000)
+            document.getElementById("totaldistance").innerHTML = totaldistance}catch{}
+            try {document.getElementById("distanceonfoot").innerHTML = Math.round(
+                (parseInt(data["combined"].metresWalked) +
+                    parseInt(data["combined"].metresSprinted) +
+                    parseInt(data["combined"].metresCrouched) +
+                    parseInt(data["combined"].metresWalkedUnderwater)) / 1000
+            );}catch{}
+            try {document.getElementById("distancewalked").innerHTML = Math.round(data["combined"].metresWalked / 1000);}catch{}
+            try {document.getElementById("distancesprinted").innerHTML = Math.round(data["combined"].metresSprinted / 1000);}catch{}
+            try {document.getElementById("distancecrouched").innerHTML = Math.round(data["combined"].metresCrouched / 1000);}catch{}
+            try {document.getElementById("distanceunderwater").innerHTML = Math.round(data["combined"].metresWalkedUnderwater / 1000);}catch{}
+            try {document.getElementById("distanceswam").innerHTML = Math.round(data["combined"].metresSwam / 1000);}catch{}
+            try {document.getElementById("distancefallen").innerHTML = Math.round(data["combined"].metresFallen / 1000);}catch{}
+            try {document.getElementById("distanceboat").innerHTML = Math.round(data["combined"].metresByBoat / 1000);}catch{}
+            try {document.getElementById("distancehorse").innerHTML = Math.round(data["combined"].metresByHorse / 1000);}catch{}
+            try {document.getElementById("distanceelytra").innerHTML = Math.round(data["combined"].metresByElytra / 1000);}catch{}
+            try {document.getElementById("distanceflown").innerHTML = Math.round(data["combined"].metresFlown / 1000);}catch{}
+            try {document.getElementById("jumps").innerHTML = data["combined"].jumps}catch{}
+            try {document.getElementById("deaths").innerHTML = data["combined"].deaths}catch{}
+            try {document.getElementById("playerkills").innerHTML = data["combined"].playersKilled}catch{}
+            try {document.getElementById("mobkills").innerHTML = data["combined"].mobsKilled}catch{}
+            try {document.getElementById("deathsbyplayer").innerHTML = data["combined"].killedBy.player}catch{}
+            try {document.getElementById("totalbroken").innerHTML = data["combined"].brokenBlocksTotal}catch{}
+            try {document.getElementById("totalcrafted").innerHTML = data["combined"].craftedItemsTotal}catch{}
+            try {document.getElementById("totalused").innerHTML = data["combined"].usedItemsTotal}catch{}
+
+            try {document.getElementById("topitemusedname1").innerHTML = format(data["combined"].usedItemsRanked[0])}catch{}
+            try {document.getElementById("topitemusedname2").innerHTML = format(data["combined"].usedItemsRanked[1])}catch{}
+            try {document.getElementById("topitemusedname3").innerHTML = format(data["combined"].usedItemsRanked[2])}catch{}
+            try {document.getElementById("topitemusedname4").innerHTML = format(data["combined"].usedItemsRanked[3])}catch{}
+            try {document.getElementById("topitemusedname5").innerHTML = format(data["combined"].usedItemsRanked[4])}catch{}
+            try {document.getElementById("topitemusedname6").innerHTML = format(data["combined"].usedItemsRanked[5])}catch{}
+            try {document.getElementById("topitemusedname7").innerHTML = format(data["combined"].usedItemsRanked[6])}catch{}
+            try {document.getElementById("topitemusedname8").innerHTML = format(data["combined"].usedItemsRanked[7])}catch{}
+            try {document.getElementById("topitemusedname9").innerHTML = format(data["combined"].usedItemsRanked[8])}catch{}
+            try {document.getElementById("topitemusedname10").innerHTML = format(data["combined"].usedItemsRanked[9])}catch{}
+
+            try {document.getElementById("topitemused1").innerHTML = data["combined"].usedItems[data["combined"].usedItemsRanked[0]]}catch{}
+            try {document.getElementById("topitemused2").innerHTML = data["combined"].usedItems[data["combined"].usedItemsRanked[1]]}catch{}
+            try {document.getElementById("topitemused3").innerHTML = data["combined"].usedItems[data["combined"].usedItemsRanked[2]]}catch{}
+            try {document.getElementById("topitemused4").innerHTML = data["combined"].usedItems[data["combined"].usedItemsRanked[3]]}catch{}
+            try {document.getElementById("topitemused5").innerHTML = data["combined"].usedItems[data["combined"].usedItemsRanked[4]]}catch{}
+            try {document.getElementById("topitemused6").innerHTML = data["combined"].usedItems[data["combined"].usedItemsRanked[5]]}catch{}
+            try {document.getElementById("topitemused7").innerHTML = data["combined"].usedItems[data["combined"].usedItemsRanked[6]]}catch{}
+            try {document.getElementById("topitemused8").innerHTML = data["combined"].usedItems[data["combined"].usedItemsRanked[7]]}catch{}
+            try {document.getElementById("topitemused9").innerHTML = data["combined"].usedItems[data["combined"].usedItemsRanked[8]]}catch{}
+            try {document.getElementById("topitemused10").innerHTML = data["combined"].usedItems[data["combined"].usedItemsRanked[9]]}catch{}
+
+            try {document.getElementById("topitemcraftedname1").innerHTML = format(data["combined"].craftedItemsRanked[0])}catch{}
+            try {document.getElementById("topitemcraftedname2").innerHTML = format(data["combined"].craftedItemsRanked[1])}catch{}
+            try {document.getElementById("topitemcraftedname3").innerHTML = format(data["combined"].craftedItemsRanked[2])}catch{}
+            try {document.getElementById("topitemcraftedname4").innerHTML = format(data["combined"].craftedItemsRanked[3])}catch{}
+            try {document.getElementById("topitemcraftedname5").innerHTML = format(data["combined"].craftedItemsRanked[4])}catch{}
+            try {document.getElementById("topitemcraftedname6").innerHTML = format(data["combined"].craftedItemsRanked[5])}catch{}
+            try {document.getElementById("topitemcraftedname7").innerHTML = format(data["combined"].craftedItemsRanked[6])}catch{}
+            try {document.getElementById("topitemcraftedname8").innerHTML = format(data["combined"].craftedItemsRanked[7])}catch{}
+            try {document.getElementById("topitemcraftedname9").innerHTML = format(data["combined"].craftedItemsRanked[8])}catch{}
+            try {document.getElementById("topitemcraftedname10").innerHTML = format(data["combined"].craftedItemsRanked[9])}catch{}
+
+            try {document.getElementById("topitemcrafted1").innerHTML = data["combined"].craftedItems[data["combined"].craftedItemsRanked[0]]}catch{}
+            try {document.getElementById("topitemcrafted2").innerHTML = data["combined"].craftedItems[data["combined"].craftedItemsRanked[1]]}catch{}
+            try {document.getElementById("topitemcrafted3").innerHTML = data["combined"].craftedItems[data["combined"].craftedItemsRanked[2]]}catch{}
+            try {document.getElementById("topitemcrafted4").innerHTML = data["combined"].craftedItems[data["combined"].craftedItemsRanked[3]]}catch{}
+            try {document.getElementById("topitemcrafted5").innerHTML = data["combined"].craftedItems[data["combined"].craftedItemsRanked[4]]}catch{}
+            try {document.getElementById("topitemcrafted6").innerHTML = data["combined"].craftedItems[data["combined"].craftedItemsRanked[5]]}catch{}
+            try {document.getElementById("topitemcrafted7").innerHTML = data["combined"].craftedItems[data["combined"].craftedItemsRanked[6]]}catch{}
+            try {document.getElementById("topitemcrafted8").innerHTML = data["combined"].craftedItems[data["combined"].craftedItemsRanked[7]]}catch{}
+            try {document.getElementById("topitemcrafted9").innerHTML = data["combined"].craftedItems[data["combined"].craftedItemsRanked[8]]}catch{}
+            try {document.getElementById("topitemcrafted10").innerHTML = data["combined"].craftedItems[data["combined"].craftedItemsRanked[9]]}catch{}
+
+            try {document.getElementById("topblockbrokenname1").innerHTML = format(data["combined"].brokenBlocksRanked[0])}catch{}
+            try {document.getElementById("topblockbrokenname2").innerHTML = format(data["combined"].brokenBlocksRanked[1])}catch{}
+            try {document.getElementById("topblockbrokenname3").innerHTML = format(data["combined"].brokenBlocksRanked[2])}catch{}
+            try {document.getElementById("topblockbrokenname4").innerHTML = format(data["combined"].brokenBlocksRanked[3])}catch{}
+            try {document.getElementById("topblockbrokenname5").innerHTML = format(data["combined"].brokenBlocksRanked[4])}catch{}
+            try {document.getElementById("topblockbrokenname6").innerHTML = format(data["combined"].brokenBlocksRanked[5])}catch{}
+            try {document.getElementById("topblockbrokenname7").innerHTML = format(data["combined"].brokenBlocksRanked[6])}catch{}
+            try {document.getElementById("topblockbrokenname8").innerHTML = format(data["combined"].brokenBlocksRanked[7])}catch{}
+            try {document.getElementById("topblockbrokenname9").innerHTML = format(data["combined"].brokenBlocksRanked[8])}catch{}
+            try {document.getElementById("topblockbrokenname10").innerHTML = format(data["combined"].brokenBlocksRanked[9])}catch{}
+
+            try {document.getElementById("topblockbroken1").innerHTML = data["combined"].brokenBlocks[data["combined"].brokenBlocksRanked[0]]}catch{}
+            try {document.getElementById("topblockbroken2").innerHTML = data["combined"].brokenBlocks[data["combined"].brokenBlocksRanked[1]]}catch{}
+            try {document.getElementById("topblockbroken3").innerHTML = data["combined"].brokenBlocks[data["combined"].brokenBlocksRanked[2]]}catch{}
+            try {document.getElementById("topblockbroken4").innerHTML = data["combined"].brokenBlocks[data["combined"].brokenBlocksRanked[3]]}catch{}
+            try {document.getElementById("topblockbroken5").innerHTML = data["combined"].brokenBlocks[data["combined"].brokenBlocksRanked[4]]}catch{}
+            try {document.getElementById("topblockbroken6").innerHTML = data["combined"].brokenBlocks[data["combined"].brokenBlocksRanked[5]]}catch{}
+            try {document.getElementById("topblockbroken7").innerHTML = data["combined"].brokenBlocks[data["combined"].brokenBlocksRanked[6]]}catch{}
+            try {document.getElementById("topblockbroken8").innerHTML = data["combined"].brokenBlocks[data["combined"].brokenBlocksRanked[7]]}catch{}
+            try {document.getElementById("topblockbroken9").innerHTML = data["combined"].brokenBlocks[data["combined"].brokenBlocksRanked[8]]}catch{}
+            try {document.getElementById("topblockbroken10").innerHTML = data["combined"].brokenBlocks[data["combined"].brokenBlocksRanked[9]]}catch{}
+
+            try {document.getElementById("topmobkillname1").innerHTML = format(data["combined"].killedMobsRanked[0])}catch{}
+            try {document.getElementById("topmobkillname2").innerHTML = format(data["combined"].killedMobsRanked[1])}catch{}
+            try {document.getElementById("topmobkillname3").innerHTML = format(data["combined"].killedMobsRanked[2])}catch{}
+            try {document.getElementById("topmobkillname4").innerHTML = format(data["combined"].killedMobsRanked[3])}catch{}
+            try {document.getElementById("topmobkillname5").innerHTML = format(data["combined"].killedMobsRanked[4])}catch{}
+            try {document.getElementById("topmobkillname6").innerHTML = format(data["combined"].killedMobsRanked[5])}catch{}
+            try {document.getElementById("topmobkillname7").innerHTML = format(data["combined"].killedMobsRanked[6])}catch{}
+            try {document.getElementById("topmobkillname8").innerHTML = format(data["combined"].killedMobsRanked[7])}catch{}
+            try {document.getElementById("topmobkillname9").innerHTML = format(data["combined"].killedMobsRanked[8])}catch{}
+            try {document.getElementById("topmobkillname10").innerHTML = format(data["combined"].killedMobsRanked[9])}catch{}
+
+            try {document.getElementById("topmobkilled1").innerHTML = data["combined"].killedMobs[data["combined"].killedMobsRanked[0]]}catch{}
+            try {document.getElementById("topmobkilled2").innerHTML = data["combined"].killedMobs[data["combined"].killedMobsRanked[1]]}catch{}
+            try {document.getElementById("topmobkilled3").innerHTML = data["combined"].killedMobs[data["combined"].killedMobsRanked[2]]}catch{}
+            try {document.getElementById("topmobkilled4").innerHTML = data["combined"].killedMobs[data["combined"].killedMobsRanked[3]]}catch{}
+            try {document.getElementById("topmobkilled5").innerHTML = data["combined"].killedMobs[data["combined"].killedMobsRanked[4]]}catch{}
+            try {document.getElementById("topmobkilled6").innerHTML = data["combined"].killedMobs[data["combined"].killedMobsRanked[5]]}catch{}
+            try {document.getElementById("topmobkilled7").innerHTML = data["combined"].killedMobs[data["combined"].killedMobsRanked[6]]}catch{}
+            try {document.getElementById("topmobkilled8").innerHTML = data["combined"].killedMobs[data["combined"].killedMobsRanked[7]]}catch{}
+            try {document.getElementById("topmobkilled9").innerHTML = data["combined"].killedMobs[data["combined"].killedMobsRanked[8]]}catch{}
+            try {document.getElementById("topmobkilled10").innerHTML = data["combined"].killedMobs[data["combined"].killedMobsRanked[9]]}catch{}
+
+            try {document.getElementById("topmobdeathname1").innerHTML = format(data["combined"].killedByRanked[0])}catch{}
+            try {document.getElementById("topmobdeathname2").innerHTML = format(data["combined"].killedByRanked[1])}catch{}
+            try {document.getElementById("topmobdeathname3").innerHTML = format(data["combined"].killedByRanked[2])}catch{}
+            try {document.getElementById("topmobdeathname4").innerHTML = format(data["combined"].killedByRanked[3])}catch{}
+            try {document.getElementById("topmobdeathname5").innerHTML = format(data["combined"].killedByRanked[4])}catch{}
+            try {document.getElementById("topmobdeathname6").innerHTML = format(data["combined"].killedByRanked[5])}catch{}
+            try {document.getElementById("topmobdeathname7").innerHTML = format(data["combined"].killedByRanked[6])}catch{}
+            try {document.getElementById("topmobdeathname8").innerHTML = format(data["combined"].killedByRanked[7])}catch{}
+            try {document.getElementById("topmobdeathname9").innerHTML = format(data["combined"].killedByRanked[8])}catch{}
+            try {document.getElementById("topmobdeathname10").innerHTML = format(data["combined"].killedByRanked[9])}catch{}
+
+            try {document.getElementById("topmobdeath1").innerHTML = data["combined"].killedBy[data["combined"].killedByRanked[0]]}catch{}
+            try {document.getElementById("topmobdeath2").innerHTML = data["combined"].killedBy[data["combined"].killedByRanked[1]]}catch{}
+            try {document.getElementById("topmobdeath3").innerHTML = data["combined"].killedBy[data["combined"].killedByRanked[2]]}catch{}
+            try {document.getElementById("topmobdeath4").innerHTML = data["combined"].killedBy[data["combined"].killedByRanked[3]]}catch{}
+            try {document.getElementById("topmobdeath5").innerHTML = data["combined"].killedBy[data["combined"].killedByRanked[4]]}catch{}
+            try {document.getElementById("topmobdeath6").innerHTML = data["combined"].killedBy[data["combined"].killedByRanked[5]]}catch{}
+            try {document.getElementById("topmobdeath7").innerHTML = data["combined"].killedBy[data["combined"].killedByRanked[6]]}catch{}
+            try {document.getElementById("topmobdeath8").innerHTML = data["combined"].killedBy[data["combined"].killedByRanked[7]]}catch{}
+            try {document.getElementById("topmobdeath9").innerHTML = data["combined"].killedBy[data["combined"].killedByRanked[8]]}catch{}
+            try {document.getElementById("topmobdeath10").innerHTML = data["combined"].killedBy[data["combined"].killedByRanked[9]]}catch{}
+
+
+
+            try {if (Math.round(data["combined"].metresFallen / 1000) > 100) {
+                document.getElementById("distancecomments").innerHTML += "Falling over 100km is like falling space to earth!<br>";
+            }
+            if (totaldistance > 40075) {
+                document.getElementById("distancecomments").innerHTML += "You travelled <em>around the whole earth!</em><br>";
+            }
+            else if (totaldistance > 20000) {
+                document.getElementById("distancecomments").innerHTML += "You travelled <em>halfway around the whole earth!</em><br>";
+            }
+            else if (totaldistance > 10000) {
+                document.getElementById("distancecomments").innerHTML += "You travelled a <em>quarter of the way around the whole earth!</em><br>";
+            }
+            else if (totaldistance > 5500) {
+                document.getElementById("distancecomments").innerHTML += "You travelled the distance from <em>New York to London!</em><br>";
+            }
+            else if (totaldistance > 3300) {
+                document.getElementById("distancecomments").innerHTML += "You travelled the distance from <em>Helsinki to Lisbon!</em><br>";
+            }
+            else if (totaldistance > 2200) {
+                document.getElementById("distancecomments").innerHTML += "You travelled the distance from <em>Helsinki to Rome!</em><br>";
+            }
+            else if (totaldistance > 1800) {
+                document.getElementById("distancecomments").innerHTML += "You travelled the distance from <em>Helsinki to London!</em><br>";
+            }
+            else if (totaldistance > 1100) {
+                document.getElementById("distancecomments").innerHTML += "You travelled the distance from <em>Helsinki to Berlin!</em><br>";
+            }
+            else if (totaldistance > 900) {
+                document.getElementById("distancecomments").innerHTML += "You travelled the distance from <em>Helsinki to Warsaw!</em><br>";
+            }
+            else if (totaldistance > 700) {
+                document.getElementById("distancecomments").innerHTML += "You travelled the distance from <em>Helsinki to Rovaniemi!</em><br>";
+            }
+            else if (totaldistance > 400) {
+                document.getElementById("distancecomments").innerHTML += "You travelled the distance from <em>Helsinki to Stockholm!</em><br>";
+            }
+            else if (totaldistance > 150) {
+                document.getElementById("distancecomments").innerHTML += "You travelled the distance from <em>Helsinki to Turku!</em><br>";
+            }}catch{}
+        })
+    </script>
+    <script src="" async defer></script>
+</body>
+
+</html>
