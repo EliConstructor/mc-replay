@@ -8,148 +8,134 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>REPLAY 2022</title>
+    <title>REPLAY 2023</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <meta name="darkreader-lock">
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
     <div class="titleframe">
-        <h1 class="maintitle" id="maintitle">REPLAY 2022</h1>
-        <p class="complaint">I spent way too long on this.</p>
+        <h1 class="maintitle" id="maintitle">REPLAY 2023</h1>
     </div>
 
-    <div class="section playtime">
+    <div class="section playtime" id="playtime">
         <h1 class="cattitle">Playtime</h1>
-        <p class="maintext">Last year you spent a total of <em><a id="totalplaytime">0</a> hours </em>playing on the
-            server.</p>
+        <p class="maintext">This year you spent a total of <em><a id="totalplaytime">0</a> hours </em>playing on
+            servers.</p>
         <p class="maintext">Your top 3 servers ranked by playtime are:</p>
-        <ol class="ranking">
-            <li><a id="playtimeserver1name">N/A</a>: <em><a id="playtimeserver1">0</a> hours</em></li>
-            <li><a id="playtimeserver2name">N/A</a>: <em><a id="playtimeserver2">0</a> hours</em></li>
-            <li><a id="playtimeserver3name">N/A</a>: <em><a id="playtimeserver3">0</a> hours</em></li>
-        </ol>
+        <p><a id="playtimeserver1name">N/A</a>: <em><a id="playtimeserver1">0</a> hours</em><br>
+        <a id="playtimeserver2name">N/A</a>: <em><a id="playtimeserver2">0</a> hours</em><br>
+        <a id="playtimeserver3name">N/A</a>: <em><a id="playtimeserver3">0</a> hours</em></p>
         <p class="maintext">You had <em><a id="sessions">0</a> </em> play sessions.</p>
         <p class="maintext"><em><a id="sneaktime">0</a> </em> of those hours were spent holding the shift key. <a
                 id="sneaktimeouch"></a></p>
     </div>
 
-    <div class="section distance">
+    <div class="section distance" id="distance">
         <h1 class="cattitle">Distance</h1>
-        <p class="maintext">Last year you travelled <em><a id="totaldistance">0</a> km </em>on the server using all
+        <p class="maintext">This year you travelled <em><a id="totaldistance">0</a> km </em>on the server using all
             forms of movement.</p>
         <p class="maintext">Here are all your forms of transport broken down:</p>
-        <ul class="ranking">
-            <li>On foot (All): <em><a id="distanceonfoot">0</a> km</em></li>
-            <li>On foot (Walking): <em><a id="distancewalked">0</a> km</em></li>
-            <li>On foot (Sprinting): <em><a id="distancesprinted">0</a> km</em></li>
-            <li>On foot (Crouching): <em><a id="distancecrouched">0</a> km</em></li>
-            <li>On foot (Underwater): <em><a id="distanceunderwater">0</a> km</em></li>
-            <li>Swimming: <em><a id="distanceswam">0</a> km</em></li>
-            <li>Falling: <em><a id="distancefallen">0</a> km</em></li>
-            <li>By boat: <em><a id="distanceboat">0</a> km</em></li>
-            <li>On horseback: <em><a id="distancehorse">0</a> km</em></li>
-            <li>Elytra: <em><a id="distanceelytra">0</a> km</em></li>
-            <li>Other: <em><a id="distanceflown">0</a> km</em></li>
-        </ul>
+        <p>On foot (All): <em><a id="distanceonfoot">0</a> km</em><br>
+        On foot (Walking): <em><a id="distancewalked">0</a> km</em><br>
+        On foot (Sprinting): <em><a id="distancesprinted">0</a> km</em><br>
+        On foot (Crouching): <em><a id="distancecrouched">0</a> km</em><br>
+        On foot (Underwater): <em><a id="distanceunderwater">0</a> km</em><br>
+        Swimming: <em><a id="distanceswam">0</a> km</em><br>
+        Falling: <em><a id="distancefallen">0</a> km</em><br>
+        By boat: <em><a id="distanceboat">0</a> km</em><br>
+        On horseback: <em><a id="distancehorse">0</a> km</em><br>
+        Elytra: <em><a id="distanceelytra">0</a> km</em><br>
+        Other: <em><a id="distanceflown">0</a> km</em></p>
         <p class="maintext"><a id="distancecomments"></a></p>
         <p class="maintext">You jumped <em><a id="jumps"></a> times!</em></p>
     </div>
 
-    <div class="section combat">
+    <div class="section combat" id="combat">
         <h1 class="cattitle">Combat</h1>
-        <p class="maintext">Last year you died <em><a id="deaths">0</a> times.</em></p>
+        <p class="maintext">This year you died <em><a id="deaths">0</a> times.</em></p>
         <p class="maintext">You killed <em><a id="playerkills">0</a> players.</em></p>
         <p class="maintext">You were killed by a player <em><a id="deathsbyplayer">0</a> times.</em></p>
-        <p class="maintext">You killed <em><a id="mobkills">0</a> mobs.</em></p>
-        <p class="maintext">Your top 10 most killed mobs were:</p>
-        <ol class="ranking">
-            <li><a id="topmobkillname1">N/A</a>: <em><a id="topmobkilled1">0</a> times</em></li>
-            <li><a id="topmobkillname2">N/A</a>: <em><a id="topmobkilled2">0</a> times</em></li>
-            <li><a id="topmobkillname3">N/A</a>: <em><a id="topmobkilled3">0</a> times</em></li>
-            <li><a id="topmobkillname4">N/A</a>: <em><a id="topmobkilled4">0</a> times</em></li>
-            <li><a id="topmobkillname5">N/A</a>: <em><a id="topmobkilled5">0</a> times</em></li>
-            <li><a id="topmobkillname6">N/A</a>: <em><a id="topmobkilled6">0</a> times</em></li>
-            <li><a id="topmobkillname7">N/A</a>: <em><a id="topmobkilled7">0</a> times</em></li>
-            <li><a id="topmobkillname8">N/A</a>: <em><a id="topmobkilled8">0</a> times</em></li>
-            <li><a id="topmobkillname9">N/A</a>: <em><a id="topmobkilled9">0</a> times</em></li>
-            <li><a id="topmobkillname10">N/A</a>: <em><a id="topmobkilled10">0</a> times</em></li>
-        </ol>
-        <p class="maintext">The top 10 mobs that you died to most were:</p>
-        <ol class="ranking">
-            <li><a id="topmobdeathname1">N/A</a>: <em><a id="topmobdeath1">0</a> times</em></li>
-            <li><a id="topmobdeathname2">N/A</a>: <em><a id="topmobdeath2">0</a> times</em></li>
-            <li><a id="topmobdeathname3">N/A</a>: <em><a id="topmobdeath3">0</a> times</em></li>
-            <li><a id="topmobdeathname4">N/A</a>: <em><a id="topmobdeath4">0</a> times</em></li>
-            <li><a id="topmobdeathname5">N/A</a>: <em><a id="topmobdeath5">0</a> times</em></li>
-            <li><a id="topmobdeathname6">N/A</a>: <em><a id="topmobdeath6">0</a> times</em></li>
-            <li><a id="topmobdeathname7">N/A</a>: <em><a id="topmobdeath7">0</a> times</em></li>
-            <li><a id="topmobdeathname8">N/A</a>: <em><a id="topmobdeath8">0</a> times</em></li>
-            <li><a id="topmobdeathname9">N/A</a>: <em><a id="topmobdeath9">0</a> times</em></li>
-            <li><a id="topmobdeathname10">N/A</a>: <em><a id="topmobdeath10">0</a> times</em></li>
-        </ol>
+        <p class="maintext">You killed <em><a id="mobkills">0</a> mobs.</em></p><br>
+        <p class="maintext"><b>Your top 10 most killed mobs were:</b></p>
+        <p><a id="topmobkillname1">N/A</a>: <em><a id="topmobkilled1">0</a> times</em><br>
+        <a id="topmobkillname2">N/A</a>: <em><a id="topmobkilled2">0</a> times</em><br>
+        <a id="topmobkillname3">N/A</a>: <em><a id="topmobkilled3">0</a> times</em><br>
+        <a id="topmobkillname4">N/A</a>: <em><a id="topmobkilled4">0</a> times</em><br>
+        <a id="topmobkillname5">N/A</a>: <em><a id="topmobkilled5">0</a> times</em><br>
+        <a id="topmobkillname6">N/A</a>: <em><a id="topmobkilled6">0</a> times</em><br>
+        <a id="topmobkillname7">N/A</a>: <em><a id="topmobkilled7">0</a> times</em><br>
+        <a id="topmobkillname8">N/A</a>: <em><a id="topmobkilled8">0</a> times</em><br>
+        <a id="topmobkillname9">N/A</a>: <em><a id="topmobkilled9">0</a> times</em><br>
+        <a id="topmobkillname10">N/A</a>: <em><a id="topmobkilled10">0</a> times</em></p><br>
+        <p class="maintext"><b>The top 10 mobs that you died to most were:</b></p>
+        <p><a id="topmobdeathname1">N/A</a>: <em><a id="topmobdeath1">0</a> times</em><br>
+        <a id="topmobdeathname2">N/A</a>: <em><a id="topmobdeath2">0</a> times</em><br>
+        <a id="topmobdeathname3">N/A</a>: <em><a id="topmobdeath3">0</a> times</em><br>
+        <a id="topmobdeathname4">N/A</a>: <em><a id="topmobdeath4">0</a> times</em><br>
+        <a id="topmobdeathname5">N/A</a>: <em><a id="topmobdeath5">0</a> times</em><br>
+        <a id="topmobdeathname6">N/A</a>: <em><a id="topmobdeath6">0</a> times</em><br>
+        <a id="topmobdeathname7">N/A</a>: <em><a id="topmobdeath7">0</a> times</em><br>
+        <a id="topmobdeathname8">N/A</a>: <em><a id="topmobdeath8">0</a> times</em><br>
+        <a id="topmobdeathname9">N/A</a>: <em><a id="topmobdeath9">0</a> times</em><br>
+        <a id="topmobdeathname10">N/A</a>: <em><a id="topmobdeath10">0</a> times</em></p>
+        <p class="maintext">(If you died to a player a lot and you're wondering why, you probably participated in that one PvP server.)</p>
     </div>
 
-    <div class="section construction">
+    <div class="section construction" id="construction">
         <h1 class="cattitle">Construction</h1>
-        <p class="maintext">Last year you broke <em><a id="totalbroken">0</a> blocks </em> by hand.</p>
+        <p class="maintext">This year you broke <em><a id="totalbroken">0</a> blocks </em> by hand.</p>
         <p class="maintext">You crafted <em><a id="totalcrafted">0</a> items </em> by hand.</p>
-        <p class="maintext">You used (right clicked) <em><a id="totalused">0</a> items </em>(or held blocks).</p>
-        <p class="maintext">Your top 10 most broken blocks were:</p>
-        <ol class="ranking">
-            <li><a id="topblockbrokenname1">N/A</a>: <em><a id="topblockbroken1">0</a> times</em></li>
-            <li><a id="topblockbrokenname2">N/A</a>: <em><a id="topblockbroken2">0</a> times</em></li>
-            <li><a id="topblockbrokenname3">N/A</a>: <em><a id="topblockbroken3">0</a> times</em></li>
-            <li><a id="topblockbrokenname4">N/A</a>: <em><a id="topblockbroken4">0</a> times</em></li>
-            <li><a id="topblockbrokenname5">N/A</a>: <em><a id="topblockbroken5">0</a> times</em></li>
-            <li><a id="topblockbrokenname6">N/A</a>: <em><a id="topblockbroken6">0</a> times</em></li>
-            <li><a id="topblockbrokenname7">N/A</a>: <em><a id="topblockbroken7">0</a> times</em></li>
-            <li><a id="topblockbrokenname8">N/A</a>: <em><a id="topblockbroken8">0</a> times</em></li>
-            <li><a id="topblockbrokenname9">N/A</a>: <em><a id="topblockbroken9">0</a> times</em></li>
-            <li><a id="topblockbrokenname10">N/A</a>: <em><a id="topblockbroken10">0</a> times</em></li>
-        </ol>
-        <p class="maintext">Your top 10 most crafted items were:</p>
-        <ol class="ranking">
-            <li><a id="topitemcraftedname1">N/A</a>: <em><a id="topitemcrafted1">0</a> times</em></li>
-            <li><a id="topitemcraftedname2">N/A</a>: <em><a id="topitemcrafted2">0</a> times</em></li>
-            <li><a id="topitemcraftedname3">N/A</a>: <em><a id="topitemcrafted3">0</a> times</em></li>
-            <li><a id="topitemcraftedname4">N/A</a>: <em><a id="topitemcrafted4">0</a> times</em></li>
-            <li><a id="topitemcraftedname5">N/A</a>: <em><a id="topitemcrafted5">0</a> times</em></li>
-            <li><a id="topitemcraftedname6">N/A</a>: <em><a id="topitemcrafted6">0</a> times</em></li>
-            <li><a id="topitemcraftedname7">N/A</a>: <em><a id="topitemcrafted7">0</a> times</em></li>
-            <li><a id="topitemcraftedname8">N/A</a>: <em><a id="topitemcrafted8">0</a> times</em></li>
-            <li><a id="topitemcraftedname9">N/A</a>: <em><a id="topitemcrafted9">0</a> times</em></li>
-            <li><a id="topitemcraftedname10">N/A</a>: <em><a id="topitemcrafted10">0</a> times</em></li>
-        </ol>
-        <p class="maintext">Your top 10 most used items were:</p>
-        <ol class="ranking">
-            <li><a id="topitemusedname1">N/A</a>: <em><a id="topitemused1">0</a> times</em></li>
-            <li><a id="topitemusedname2">N/A</a>: <em><a id="topitemused2">0</a> times</em></li>
-            <li><a id="topitemusedname3">N/A</a>: <em><a id="topitemused3">0</a> times</em></li>
-            <li><a id="topitemusedname4">N/A</a>: <em><a id="topitemused4">0</a> times</em></li>
-            <li><a id="topitemusedname5">N/A</a>: <em><a id="topitemused5">0</a> times</em></li>
-            <li><a id="topitemusedname6">N/A</a>: <em><a id="topitemused6">0</a> times</em></li>
-            <li><a id="topitemusedname7">N/A</a>: <em><a id="topitemused7">0</a> times</em></li>
-            <li><a id="topitemusedname8">N/A</a>: <em><a id="topitemused8">0</a> times</em></li>
-            <li><a id="topitemusedname9">N/A</a>: <em><a id="topitemused9">0</a> times</em></li>
-            <li><a id="topitemusedname10">N/A</a>: <em><a id="topitemused10">0</a> times</em></li>
-        </ol>
+        <p class="maintext">You used (right clicked) <em><a id="totalused">0</a> items </em>.</p><br>
+        <p class="maintext"><b>Your top 10 most broken blocks were:</b></p>
+        <p><a id="topblockbrokenname1">N/A</a>: <em><a id="topblockbroken1">0</a> times</em><br>
+        <a id="topblockbrokenname2">N/A</a>: <em><a id="topblockbroken2">0</a> times</em><br>
+        <a id="topblockbrokenname3">N/A</a>: <em><a id="topblockbroken3">0</a> times</em><br>
+        <a id="topblockbrokenname4">N/A</a>: <em><a id="topblockbroken4">0</a> times</em><br>
+        <a id="topblockbrokenname5">N/A</a>: <em><a id="topblockbroken5">0</a> times</em><br>
+        <a id="topblockbrokenname6">N/A</a>: <em><a id="topblockbroken6">0</a> times</em><br>
+        <a id="topblockbrokenname7">N/A</a>: <em><a id="topblockbroken7">0</a> times</em><br>
+        <a id="topblockbrokenname8">N/A</a>: <em><a id="topblockbroken8">0</a> times</em><br>
+        <a id="topblockbrokenname9">N/A</a>: <em><a id="topblockbroken9">0</a> times</em><br>
+        <a id="topblockbrokenname10">N/A</a>: <em><a id="topblockbroken10">0</a> times</em></p><br>
+        <p class="maintext"><b>Your top 10 most crafted items were:</b></p>
+        <p><a id="topitemcraftedname1">N/A</a>: <em><a id="topitemcrafted1">0</a> times</em><br>
+        <a id="topitemcraftedname2">N/A</a>: <em><a id="topitemcrafted2">0</a> times</em><br>
+        <a id="topitemcraftedname3">N/A</a>: <em><a id="topitemcrafted3">0</a> times</em><br>
+        <a id="topitemcraftedname4">N/A</a>: <em><a id="topitemcrafted4">0</a> times</em><br>
+        <a id="topitemcraftedname5">N/A</a>: <em><a id="topitemcrafted5">0</a> times</em><br>
+        <a id="topitemcraftedname6">N/A</a>: <em><a id="topitemcrafted6">0</a> times</em><br>
+        <a id="topitemcraftedname7">N/A</a>: <em><a id="topitemcrafted7">0</a> times</em><br>
+        <a id="topitemcraftedname8">N/A</a>: <em><a id="topitemcrafted8">0</a> times</em><br>
+        <a id="topitemcraftedname9">N/A</a>: <em><a id="topitemcrafted9">0</a> times</em><br>
+        <a id="topitemcraftedname10">N/A</a>: <em><a id="topitemcrafted10">0</a> times</em></p><br>
+        <p class="maintext"><b>Your top 10 most used items were:</b></p>
+        <p><a id="topitemusedname1">N/A</a>: <em><a id="topitemused1">0</a> times</em><br>
+        <a id="topitemusedname2">N/A</a>: <em><a id="topitemused2">0</a> times</em><br>
+        <a id="topitemusedname3">N/A</a>: <em><a id="topitemused3">0</a> times</em><br>
+        <a id="topitemusedname4">N/A</a>: <em><a id="topitemused4">0</a> times</em><br>
+        <a id="topitemusedname5">N/A</a>: <em><a id="topitemused5">0</a> times</em><br>
+        <a id="topitemusedname6">N/A</a>: <em><a id="topitemused6">0</a> times</em><br>
+        <a id="topitemusedname7">N/A</a>: <em><a id="topitemused7">0</a> times</em><br>
+        <a id="topitemusedname8">N/A</a>: <em><a id="topitemused8">0</a> times</em><br>
+        <a id="topitemusedname9">N/A</a>: <em><a id="topitemused9">0</a> times</em><br>
+        <a id="topitemusedname10">N/A</a>: <em><a id="topitemused10">0</a> times</em></p>
     </div>
 
-    <div class="section conclusion">
-        <h1 class="cattitle">Here's to 2023!</h1>
-        <p class="maintext">The person with the most play time this year will get precisely <em>2,38€ </em> to be used
-            at your closest K-Market or Tesco.</p>
+    <div class="section conclusion" id=conclusion>
+        <h1 class="cattitle">Here's to 2024!</h1>
+        <p class="maintext">Due to budget cuts, the prize for most play time next year will only be <em>0,48€ </em> to be used
+            at your closest K-Market or Tesco. Still worth competing for though!</p>
         <p class="disclaimer">(Terms and conditions apply)</p>
-        <p class="complaint" style="color: rgb(94, 0, 0);">Technically this also contains a bit of the end of 2021 but shhhh nobody cares.</p>
     </div>
 
     <script>
@@ -161,13 +147,6 @@
 
             }
         }*/
-
-        window.onload = function () {
-            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-            if (mobile) {
-                document.getElementById("maintitle").style = "font-size: 80px;"
-            }
-        }
 
         const params = new Proxy(new URLSearchParams(window.location.search), {
                 get: (searchParams, prop) => searchParams.get(prop),

@@ -1,49 +1,120 @@
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-moz-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-o-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-webkit-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@-moz-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@-o-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+/* Main styles */
 body {
-    background-color: rgb(16, 22, 32);
-    margin: 0;
-    background: url('img/bg.png') no-repeat center center;
-    background-size: 3500%;
+    color: rgb(20,20,20);
+    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    text-align: center;
+    /* img size is 50x50 */
+    background: url("img/tile.png") repeat 0 0;
+    -webkit-animation: bg-scrolling-reverse 3s infinite;
+    /* Safari 4+ */
+    -moz-animation: bg-scrolling-reverse 3s infinite;
+    /* Fx 5+ */
+    -o-animation: bg-scrolling-reverse 3s infinite;
+    /* Opera 12+ */
+    animation: bg-scrolling-reverse 3s infinite;
+    /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
 }
 
+
 .titleframe {
-    background-color: rgb(7, 69, 94);
-    background: url('img/title.png') no-repeat center center;
-    background-size: 170%;
+    background-size: cover;
+    background-image: url('img/title.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(200,0,0,0.8);
+    background-blend-mode: multiply;
+    margin: 100px;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    border-radius: 10px;
+    filter: drop-shadow(0px 10px 5px);
 }
+
 
 .maintitle {
     text-align: center;
-    font-family: 'Orbitron';
+    font-family: 'Quicksand';
     color: white;
     font-size: 100px;
     margin-bottom: 0px;
+    filter: drop-shadow(0px 0px 3px black);
 }
 
 .cattitle {
-    text-align: center;
-    font-family: 'Orbitron';
+    text-align: left;
+    font-family: 'Quicksand';
     color: white;
     font-size: 50px;
     margin: 0px;
+    padding-left: 100px;
+    padding-top: 10px;
+    filter: drop-shadow(0px 0px 5px black);
 }
 
 p {
-    font-family: 'IBM Plex Sans Condensed';
+    font-family: 'Quicksand';
     color: white;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    filter: drop-shadow(0px 0px 5px black);
 }
 
 .maintext em{
     font-size: 40px;
     color: yellow;
-}
-
-.ranking {
-    font-family: 'IBM Plex Sans Condensed';
-    color: white;
-    text-align: center;
-    font-size: 20px;
 }
 
 .top3 em{
@@ -52,13 +123,19 @@ p {
 
 .section {
     padding: 10px;
-    margin-top: 200px;
+    margin: 150px;
+    margin-top: 150px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 10px 5px);
 }
 
 .playtime {
-    background-color: rgb(7, 94, 82);
-    background: url('img/playtime.png') no-repeat left center;
-    
+    background-size: cover;
+    background-image: url('img/playtime.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #8f8b1f;
+    background-blend-mode: multiply;
 }
 
 .userinput {
@@ -70,13 +147,15 @@ p {
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    border-bottom: 5px solid rgb(16, 22, 32);
-    background-color: #3CBC8D;
-    color: white;
+    background-color: #f7ea36;
+    color: black;
+    font-family: 'Quicksand';
+    border-radius: 20px;
+    width: 400px;
 }
 
 .usernameinputbox:hover{
-    background-color: #2f9670;
+    background-color: #c9bf28;
 }
 
 .usernamebutton{
@@ -84,46 +163,133 @@ p {
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    border-bottom: 5px solid rgb(16, 22, 32);
-    background-color: #3CBC8D;
-    color: white;
+    background-color: #f7ea36;
+    color: black;
+    font-family: 'Quicksand';
+    border-radius: 20px;
 }
 
 .usernamebutton:hover{
-    background-color: #2f9670;
+    background-color: #c9bf28;
 }
 
 .distance {
-    background-color: rgb(7, 94, 29);
-    background: url('img/distance.png') no-repeat center center;
+    background-size: cover;
+    background-image: url('img/distance.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #206317;
+    background-blend-mode: multiply;
 }
 
 .combat {
-    background-color: rgb(93, 94, 7);
-    background: url('img/combat.png') no-repeat center center;
-    background-size: 150%;
+    background-size: cover;
+    background-image: url('img/combat.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #1f848f;
+    background-blend-mode: multiply;
 }
 
 .construction {
-    background-color: rgb(94, 53, 7);
-    background: url('img/construction.png') no-repeat center center;
-    background-size: 150%;
+    background-size: cover;
+    background-image: url('img/construction.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #381f8f;
+    background-blend-mode: multiply;
+}
+
+.username {
+    background-size: cover;
+    background-image: url('img/username.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #a19823;
+    background-blend-mode: multiply;
+    padding-top: 50px;
+    margin-left: 25vw;
+    margin-right: 25vw;
 }
 
 .conclusion {
     margin-top: 20%;
-    background-color: rgb(94, 7, 7);
     margin-bottom: 20%;
-    background: url('img/conclusion.png') no-repeat center center;
-    background-size: 170%;
+    background-size: cover;
+    background-image: url('img/conclusion.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #8f1f8d;
+    background-blend-mode: multiply;
 }
 
 .complaint{
-    text-align: center; 
-    padding-bottom: 10px; 
+    text-align: center;
+    padding-bottom: 10px;
     color: rgb(86, 121, 151);
-    font-family: 'IBM Plex Sans Condensed';
+    font-family: 'Quicksand';
     font-size: 10px;
 }
 
+@media (max-width: 800px) {
+    p {
+        font-family: 'Quicksand';
+        color: white;
+        text-align: left;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        filter: drop-shadow(0px 0px 5px black);
+    }
+
+    .cattitle {
+        padding-left: 10px;
+    }
+
+    .section {
+        padding: 10px;
+        margin: 10px;
+        margin-top: 150px;
+        border-radius: 10px;
+        filter: drop-shadow(0px 10px 5px);
+    }
+
+    .titleframe {
+        background-size: cover;
+        background-image: url('img/title.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(200,0,0,0.8);
+        background-blend-mode: multiply;
+        margin: 10px;
+        border-radius: 10px;
+        filter: drop-shadow(0px 10px 5px);
+    }
+
+    .maintitle {
+        text-align: center;
+        font-family: 'Quicksand';
+        color: white;
+        font-size: 60px;
+        margin-bottom: 0px;
+        filter: drop-shadow(0px 0px 3px black);
+    }
+
+    .conclusion {
+        margin-bottom: 100px;
+    }
+
+    .cattitle {
+        font-size: 40px;
+    }
+
+    .maintext em{
+        font-size: 30px;
+        color: yellow;
+    }
+
+    .usernameinputbox {
+        width: 75vw;
+    }
+}
 

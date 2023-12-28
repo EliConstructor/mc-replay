@@ -8,13 +8,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>REPLAY 2022</title>
+    <title>REPLAY 2023</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <meta name="darkreader-lock">
 </head>
 
 <body>
@@ -23,14 +25,12 @@
         <![endif]-->
 
     <div class="titleframe">
-        <h1 class="maintitle" id="maintitle">REPLAY 2022</h1>
-        <p class="complaint"">I spent way too long on this.</p>
+        <h1 class="maintitle" id="maintitle">REPLAY 2023</h1>
     </div>
 
-    <div class=" section playtime">
-        <p class="maintext">Enter your username:</p>
+    <div class="section username" id="usernamesection">
         <div class="userinput">
-            <input type="text" id="username" name="username" class="usernameinputbox"><br><br>
+            <input type="text" id="username" name="username" class="usernameinputbox" placeholder="Enter your username" onkeydown="keyPressed()"><br><br>
             <button class="usernamebutton" onclick="buttonClick()">GO</button><br><br>
         </div>
         <script>
@@ -43,10 +43,9 @@
                 }
             }*/
 
-            window.onload = function () {
-                var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-                if (mobile) {
-                    document.getElementById("maintitle").style = "font-size: 80px;"
+            function keyPressed() {
+                if(event.key === 'Enter') {
+                    buttonClick()
                 }
             }
 
@@ -57,6 +56,7 @@
                     window.location.href = "replay.html?uuid=" + uuid;
                 })
             }
+
         </script>
     </div>
 
