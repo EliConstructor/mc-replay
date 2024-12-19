@@ -47,23 +47,25 @@
 }
 /* Main styles */
 body {
-    color: rgb(20,20,20);
+    /*color: rgb(20,20,20);*/
     font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
     text-align: center;
     /* img size is 50x50 */
     background: url("img/tile.png") repeat 0 0;
+    background-attachment: fixed;
     -webkit-animation: bg-scrolling-reverse 3s infinite;
     /* Safari 4+ */
     -moz-animation: bg-scrolling-reverse 3s infinite;
     /* Fx 5+ */
     -o-animation: bg-scrolling-reverse 3s infinite;
     /* Opera 12+ */
-    animation: bg-scrolling-reverse 3s infinite;
+    animation: bg-scrolling-reverse 5s infinite;
     /* IE 10+ */
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
     -o-animation-timing-function: linear;
     animation-timing-function: linear;
+    overflow-x: hidden;
 }
 
 
@@ -84,7 +86,8 @@ body {
 
 .maintitle {
     text-align: center;
-    font-family: 'Quicksand';
+    font-family: 'Dosis';
+    font-weight: 500;
     color: white;
     font-size: 100px;
     margin-bottom: 0px;
@@ -93,7 +96,8 @@ body {
 
 .cattitle {
     text-align: left;
-    font-family: 'Quicksand';
+    font-family: 'Dosis';
+    font-weight: 500;
     color: white;
     font-size: 50px;
     margin: 0px;
@@ -103,7 +107,8 @@ body {
 }
 
 p {
-    font-family: 'Quicksand';
+    font-family: 'Dosis';
+    font-weight: 500;
     color: white;
     text-align: left;
     font-size: 20px;
@@ -125,8 +130,28 @@ p {
     padding: 10px;
     margin: 150px;
     margin-top: 150px;
-    border-radius: 10px;
+    border-radius: 15px;
     filter: drop-shadow(0px 10px 5px);
+}
+
+.left {
+    margin-left: -50px;
+    padding-left: 200px;
+}
+
+.right {
+    margin-right: -50px;
+    padding-right: 200px;
+}
+
+.top {
+    margin-top: -50px;
+    padding-top: 50px;
+}
+
+.bottom {
+    margin-bottom: -50px;
+    padding-bottom: 50px;
 }
 
 .playtime {
@@ -149,7 +174,8 @@ p {
     border: none;
     background-color: #f7ea36;
     color: black;
-    font-family: 'Quicksand';
+    font-family: 'Dosis';
+    font-weight: 500;
     border-radius: 20px;
     width: 400px;
 }
@@ -165,7 +191,8 @@ p {
     border: none;
     background-color: #f7ea36;
     color: black;
-    font-family: 'Quicksand';
+    font-family: 'Dosis';
+    font-weight: 500;
     border-radius: 20px;
 }
 
@@ -200,6 +227,15 @@ p {
     background-blend-mode: multiply;
 }
 
+.economy {
+    background-size: cover;
+    background-image: url('img/economy.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #8f1f8d;
+    background-blend-mode: multiply;
+}
+
 .username {
     background-size: cover;
     background-image: url('img/username.png');
@@ -219,7 +255,7 @@ p {
     background-image: url('img/conclusion.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #8f1f8d;
+    background-color: #8f1f53;
     background-blend-mode: multiply;
 }
 
@@ -227,13 +263,15 @@ p {
     text-align: center;
     padding-bottom: 10px;
     color: rgb(86, 121, 151);
-    font-family: 'Quicksand';
+    font-family: 'Dosis';
+    font-weight: 500;
     font-size: 10px;
 }
 
 @media (max-width: 800px) {
     p {
-        font-family: 'Quicksand';
+        font-family: 'Dosis';
+        font-weight: 500;
         color: white;
         text-align: left;
         font-size: 20px;
@@ -268,7 +306,8 @@ p {
 
     .maintitle {
         text-align: center;
-        font-family: 'Quicksand';
+        font-family: 'Dosis';
+        font-weight: 500;
         color: white;
         font-size: 60px;
         margin-bottom: 0px;
@@ -293,3 +332,66 @@ p {
     }
 }
 
+
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgba(58, 58, 58, 0.25);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 30em;
+    animation: wave 100s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -10.25em;
+    animation: wave 180s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -20.5em;
+    animation: wave 200s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}

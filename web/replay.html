@@ -14,20 +14,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <meta name="darkreader-lock">
 </head>
 
 <body>
+    
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div class="titleframe">
-        <h1 class="maintitle" id="maintitle">REPLAY 2023</h1>
+    <div class="titleframe top">
+        <h1 class="maintitle" id="maintitle">REPLAY 2024</h1>
     </div>
 
-    <div class="section playtime" id="playtime">
+    <div class="section playtime left" id="playtime">
         <h1 class="cattitle">Playtime</h1>
         <p class="maintext">This year you spent a total of <em><a id="totalplaytime">0</a> hours </em>playing on
             servers.</p>
@@ -40,7 +44,7 @@
                 id="sneaktimeouch"></a></p>
     </div>
 
-    <div class="section distance" id="distance">
+    <div class="section distance right" id="distance">
         <h1 class="cattitle">Distance</h1>
         <p class="maintext">This year you travelled <em><a id="totaldistance">0</a> km </em>on the server using all
             forms of movement.</p>
@@ -60,7 +64,7 @@
         <p class="maintext">You jumped <em><a id="jumps"></a> times!</em></p>
     </div>
 
-    <div class="section combat" id="combat">
+    <div class="section combat left" id="combat">
         <h1 class="cattitle">Combat</h1>
         <p class="maintext">This year you died <em><a id="deaths">0</a> times.</em></p>
         <p class="maintext">You killed <em><a id="playerkills">0</a> players.</em></p>
@@ -91,7 +95,7 @@
         <p class="maintext">(If you died to a player a lot and you're wondering why, you probably participated in that one PvP server.)</p>
     </div>
 
-    <div class="section construction" id="construction">
+    <div class="section construction right" id="construction">
         <h1 class="cattitle">Construction</h1>
         <p class="maintext">This year you broke <em><a id="totalbroken">0</a> blocks </em> by hand.</p>
         <p class="maintext">You crafted <em><a id="totalcrafted">0</a> items </em> by hand.</p>
@@ -131,10 +135,36 @@
         <a id="topitemusedname10">N/A</a>: <em><a id="topitemused10">0</a> times</em></p>
     </div>
 
+    <div class="section economy left" id="economy">
+        <h1 class="cattitle">Economy</h1>
+        <p class="maintext">Your bank balance at the end of the year was <em><a id="bankbalance">0</a> marks </em>.</p>
+        <p class="maintext">You spent a total of <em><a id="banktotalspent">0</a> marks </em>.</p>
+        <p class="maintext">You received a total of <em><a id="banktotalreceived">0</a> marks </em>.</p>
+        <p class="maintext">You spent <em><a id="banktotalreceived">0</a> marks </em> as an <s>addicted</s> ambitious gambler.</p><br>
+        <p class="maintext"><b>Your top 5 accounts to which you paid the most money were:</b></p>
+        <p><a id="topblockbrokenname1">N/A</a>: <em><a id="banktotalpaid1">0</a> marks</em><br>
+        <a id="topblockbrokenname2">N/A</a>: <em><a id="banktotalpaid2">0</a> marks</em><br>
+        <a id="topblockbrokenname3">N/A</a>: <em><a id="banktotalpaid3">0</a> marks</em><br>
+        <a id="topblockbrokenname4">N/A</a>: <em><a id="banktotalpaid4">0</a> marks</em><br>
+        <a id="topblockbrokenname5">N/A</a>: <em><a id="banktotalpaid5">0</a> marks</em><br>
+        <p class="maintext"><b>Your top 5 accounts from which you received the most money were:</b></p>
+        <p><a id="topitemcraftedname1">N/A</a>: <em><a id="banktotalreceived1">0</a> marks</em><br>
+        <a id="topitemcraftedname2">N/A</a>: <em><a id="banktotalreceived2">0</a> marks</em><br>
+        <a id="topitemcraftedname3">N/A</a>: <em><a id="banktotalreceived3">0</a> marks</em><br>
+        <a id="topitemcraftedname4">N/A</a>: <em><a id="banktotalreceived4">0</a> marks</em><br>
+        <a id="topitemcraftedname5">N/A</a>: <em><a id="banktotalreceived5">0</a> marks</em><br>
+        <p class="maintext"><b>The places you spent the most money at were:</b></p>
+        <p><a id="topitemusedname1">N/A</a>: <em><a id="bankmostusedterminal1">0</a> marks</em><br>
+        <a id="topitemusedname2">N/A</a>: <em><a id="bankmostusedterminal2">0</a> marks</em><br>
+        <a id="topitemusedname3">N/A</a>: <em><a id="bankmostusedterminal3">0</a> marks</em><br>
+        <a id="topitemusedname4">N/A</a>: <em><a id="bankmostusedterminal4">0</a> marks</em><br>
+        <a id="topitemusedname5">N/A</a>: <em><a id="bankmostusedterminal5">0</a> marks</em><br>
+    </div>
+
     <div class="section conclusion" id=conclusion>
-        <h1 class="cattitle">Here's to 2024!</h1>
-        <p class="maintext">Due to budget cuts, the prize for most play time next year will only be <em>0,48€ </em> to be used
-            at your closest K-Market or Tesco. Still worth competing for though!</p>
+        <h1 class="cattitle">Here's to 2025!</h1>
+        <p class="maintext">Thanks to financial gains generated by the casino, the prize for most play time next year will be <em>1,43€ </em> to be used
+            at your closest K-Market or Prisma. If there is no K-Market or Prisma within 50 km of your home, you will receive a Glock "Fade" instead.</p>
         <p class="disclaimer">(Terms and conditions apply)</p>
     </div>
 
@@ -368,6 +398,17 @@
             }}catch{}
         })
     </script>
+
+    
+
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    
+    
+
     <script src="" async defer></script>
 </body>
 
